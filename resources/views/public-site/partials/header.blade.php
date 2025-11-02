@@ -1,5 +1,5 @@
 <!-- Main Header -->
-<header class="main-header header-style-two">
+<header class="main-header {{ request()->is('/') ? 'header-style-two' : 'header-style-one' }}">
 
     <!-- Header Top -->
     <div class="header-top-two">
@@ -16,7 +16,8 @@
                 <div class="middle-column">
                     <!--Logo-->
                     <div class="logo-box" style="margin-bottom: 0px;">
-                        <div class="logo"><a href="index.html"><img src="assets/images/rt-logo.jpg" alt=""></a></div>
+                        <div class="logo"><a href="index.html"><img src="{{ asset('assets/images/rt-logo.jpg') }}"
+                                    alt=""></a></div>
                     </div>
                 </div>
                 <div class="right-column">
@@ -36,22 +37,24 @@
             <div class="inner-container">
                 <!--Logo-->
                 <div class="logo-box d-none">
-                    <div class="logo"><a href="index.html"><img src="assets/images/rt-logo.jpg" alt=""></a></div>
+                    <div class="logo"><a href="index.html"><img src="{{ asset('assets/images/rt-logo.jpg') }}"
+                                alt=""></a></div>
                 </div>
                 <!--Nav Box-->
                 <div class="nav-outer">
                     <!--Mobile Navigation Toggler-->
-                    <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt=""></div>
+                    <div class="mobile-nav-toggler"><img src="{{ asset('assets/images/icons/icon-bar-2.png') }}" alt="">
+                    </div>
 
                     <!-- Main Menu -->
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Gallery</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/gallery">Gallery</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -68,13 +71,15 @@
                 <div class="inner-container">
                     <!--Logo-->
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="assets/images/rt-logo.jpg" alt=""></a></div>
+                        <div class="logo"><a href="index.html"><img src="{{ asset('assets/images/rt-logo.jpg') }}"
+                                    alt=""></a></div>
                     </div>
                     <div class="right-column">
                         <!--Nav Box-->
                         <div class="nav-outer">
                             <!--Mobile Navigation Toggler-->
-                            <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar.png" alt=""></div>
+                            <div class="mobile-nav-toggler"><img src="{{ asset('assets/images/icons/icon-bar-2.png') }}"
+                                    alt=""></div>
 
                             <!-- Main Menu -->
                             <nav class="main-menu navbar-expand-md navbar-light">
@@ -92,7 +97,8 @@
         <div class="close-btn"><i class="icon fal fa-times"></i></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="index.html"><img src="assets/images/rt-logo.jpg" alt="" title=""></a></div>
+            <div class="nav-logo"><a href="index.html"><img src="{{ asset('assets/images/rt-logo.jpg') }}" alt=""
+                        title=""></a></div>
             <div class="menu-outer">
                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             </div>

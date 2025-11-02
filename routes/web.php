@@ -17,6 +17,23 @@ Route::get('/', function () {
     return view('public-site.home');
 });
 
+Route::get('/about', function () {
+    return view('public-site.about');
+});
+
+Route::get('/services', function () {
+    return view('public-site.services');
+});
+
+Route::get('/contact', function () {
+    return view('public-site.contact');
+});
+
+
+Route::get('/gallery', function () {
+    return view('public-site.gallery');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
